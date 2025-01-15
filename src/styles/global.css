@@ -1,0 +1,31 @@
+.popup {
+               display: none;
+               position: fixed;
+               top: 50%;
+               left: 50%;
+               transform: translate(-50%, -50%);
+               background-color: rgba(0, 0, 0, 0.9);
+               /* Darker background for better contrast */
+               padding: 2rem;
+               border-radius: 10px;
+               z-index: 1000;
+               border: 2px solid #ff0000;
+               /* Red border for Spiderman theme */
+               box-shadow: 0 0 20px rgba(255, 0, 0, 0.5);
+               /* Glow effect */
+          }
+
+          .popup input::placeholder {
+               color: #a0aec0;
+               /* Lighter placeholder text */
+          }
+
+          .popup button {
+               transition: background-color 0.3s ease;
+               /* Smooth hover transition */
+          }
+
+          .popup button:hover {
+               background-color: #e53e3e;
+               /* Darker red on hover */
+          }

@@ -1,0 +1,18 @@
+{
+  "name": "m2-vite",
+  "private": true,
+  "version": "0.3.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "release": "standard-version"
+  },
+  "devDependencies": {
+    "vite": "^6.0.5"
+  },
+  "dependencies": {
+    "standard-version": "^9.5.0"
+  }
+}
