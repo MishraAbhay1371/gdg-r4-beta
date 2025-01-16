@@ -23,7 +23,6 @@
 //   return response.json();
 // };
 
-
 // API v2
 const url =
   "https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/ukWVVGMHLFxiIbJDv3Hm/scores";
@@ -69,11 +68,10 @@ const postScore = async () => {
 
     return response.json();
   } else {
-    console.log("Username already exists 3 times. Score not posted.");
+    alert("You have reached the maximum number of submissions for ");
     return null;
   }
 };
-
 
 (function (Ie) {
   function v(a, b) {
@@ -720,7 +718,7 @@ const postScore = async () => {
         d.trophy2 = a;
       });
   };
-  
+
   U.save = function () {
     U.saveInt("score1", d.score1);
     U.saveInt("time1", d.time1);
@@ -729,7 +727,7 @@ const postScore = async () => {
 
     // Save score1 into localStorage as an integer with var name teamScore
     localStorage.setItem("teamScore", d.score1);
-    
+
     // mission 2
     U.saveInt("score2", d.score2);
     U.saveInt("time2", d.time2);
@@ -739,12 +737,11 @@ const postScore = async () => {
     //play count
     U.saveInt("playCount", d.playCount);
   };
-  
+
   U.saveInt = function (a, b) {
     m.$vG.getCloudStorage().set(U.gameName + a, b);
   };
 
- 
   var xd = function () {};
   l["haxe.IMap"] = xd;
   xd.__name__ = ["haxe", "IMap"];
@@ -12618,17 +12615,12 @@ const postScore = async () => {
             : (this.screen.$zF[19].stopGame(), this.screen.$zF[19].dispose()),
           this.fadeOut(D(this, this.charScreen)),
           this.menuLoop.volume.animateTo(this.musicVolume, 0.5));
-
     },
     startGame: function () {
-
-      //new logic for game loop 
+      //new logic for game loop
       if (d.playCount >= 3) {
-        alert(
-          "You have played the game 3 times! You can't submit more scores."
-        );
-        window.location.href = ".././end.html";
-        return null;
+        alert("You played the game 3 times!!");
+        return;
       }
 
       d.playCount++;
@@ -13176,17 +13168,14 @@ const postScore = async () => {
       );
       P.spawn(this.closeBtn, 1.5, 0.5, 0.5);
       this.items.push(this.closeBtn);
-
-      // yaha se replay button ko hata diya
-
-      this.replayBtn = new h(); 
+      this.replayBtn = new h();
       g.createImageSprite(
         this.owner,
         this.replayBtn,
         "buttons/BTN_replay",
         !0,
-        285,
-        0
+        20000,
+        -20000
       );
       P.spawn(this.replayBtn, 1.7, 0.5, 0.5);
       this.items.push(this.replayBtn);
@@ -20111,4 +20100,3 @@ const postScore = async () => {
     ? self
     : this
 );
-
