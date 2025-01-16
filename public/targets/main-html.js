@@ -13179,17 +13179,17 @@ const postScore = async () => {
 
       // yaha se replay button ko hata diya
 
-      // this.replayBtn = new h(); 
-      // g.createImageSprite(
-      //   this.owner,
-      //   this.replayBtn,
-      //   "buttons/BTN_replay",
-      //   !0,
-      //   285,
-      //   0
-      // );
-      // P.spawn(this.replayBtn, 1.7, 0.5, 0.5);
-      // this.items.push(this.replayBtn);
+      this.replayBtn = new h(); 
+      g.createImageSprite(
+        this.owner,
+        this.replayBtn,
+        "buttons/BTN_replay",
+        !0,
+        285,
+        0
+      );
+      P.spawn(this.replayBtn, 1.7, 0.5, 0.5);
+      this.items.push(this.replayBtn);
       0 < this.trophyNumber &&
         ((a = new h()),
         g.createImageSprite(
