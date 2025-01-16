@@ -26,7 +26,7 @@
 
 // API v2
 const url =
-  "https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/LOwAyldXGa2Rle8qWWi7/scores";
+  "https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/ukWVVGMHLFxiIbJDv3Hm/scores";
 
 // Function to fetch scores from the API
 const fetchScores = async () => {
@@ -12624,8 +12624,11 @@ const postScore = async () => {
 
       //new logic for game loop 
       if (d.playCount >= 3) {
-        alert("You have reached the maximum number of plays.");
-        return;
+        alert(
+          "You have played the game 3 times! You can't submit more scores."
+        );
+        window.location.href = ".././end.html";
+        return null;
       }
 
       d.playCount++;
@@ -13173,17 +13176,20 @@ const postScore = async () => {
       );
       P.spawn(this.closeBtn, 1.5, 0.5, 0.5);
       this.items.push(this.closeBtn);
-      this.replayBtn = new h();
-      g.createImageSprite(
-        this.owner,
-        this.replayBtn,
-        "buttons/BTN_replay",
-        !0,
-        285,
-        0
-      );
-      P.spawn(this.replayBtn, 1.7, 0.5, 0.5);
-      this.items.push(this.replayBtn);
+
+      // yaha se replay button ko hata diya
+
+      // this.replayBtn = new h(); 
+      // g.createImageSprite(
+      //   this.owner,
+      //   this.replayBtn,
+      //   "buttons/BTN_replay",
+      //   !0,
+      //   285,
+      //   0
+      // );
+      // P.spawn(this.replayBtn, 1.7, 0.5, 0.5);
+      // this.items.push(this.replayBtn);
       0 < this.trophyNumber &&
         ((a = new h()),
         g.createImageSprite(

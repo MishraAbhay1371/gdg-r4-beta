@@ -26,7 +26,7 @@
 
 // API v2
 const url =
-  "https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/LOwAyldXGa2Rle8qWWi7/scores";
+  "https://us-central1-js-capstone-backend.cloudfunctions.net/api/games/ukWVVGMHLFxiIbJDv3Hm/scores";
 
 // Function to fetch scores from the API
 const fetchScores = async () => {
@@ -69,7 +69,7 @@ const postScore = async () => {
 
     return response.json();
   } else {
-    console.log("Username already exists 3 times. Score not posted.");
+    alert("You have reached the maximum number of submissions for ");
     return null;
   }
 };
@@ -12624,7 +12624,7 @@ const postScore = async () => {
 
       //new logic for game loop 
       if (d.playCount >= 3) {
-        alert("You have reached the maximum number of plays.");
+        alert("You played the game 3 times!!");
         return;
       }
 

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+     <meta charset="UTF-8">
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <title>Redirect to leaderboard</title>
+     <link rel="stylesheet" href="styles.css">
+     <style>
+          body {
+               margin: 0;
+               padding: 0;
+               background-image: url('/bg.jpg');
+               background-repeat: no-repeat;
+               background-position: center center;
+               background-attachment: fixed;
+               background-size: cover;
+               font-family: Arial, sans-serif;
+               color: white;
+               display: flex;
+               justify-content: center;
+               align-items: center;
+               height: 100vh;
+          }
+
+            .container {
+                  text-align: center;
+                  background-color: rgba(0, 0, 0, 0.6);
+                  padding: 20px;
+                  border-radius: 10px;
+                  width: 80%;
+                  max-width: 500px;
+            }
+
+            .container h1 {
+                  font-size: 2.5rem;
+                  margin: 0;
+            }
+
+            .container h2 {
+                  font-size: 1.5rem;
+                  margin: 10px 0 20px;
+            }
+
+            .buttons {
+                  display: flex;
+                  justify-content: center;
+                  gap: 15px;
+                  flex-wrap: wrap;
+            }
+
+            .buttons a {
+                  text-decoration: none;
+                  color: white;
+                  background: #f01c1c;
+                  padding: 10px 15px;
+                  border-radius: 5px;
+                  font-size: 1rem;
+                  transition: background-color 0.3s;
+            }
+
+            .buttons a:hover {
+                  background: #555;
+            }
+
+            .buttons a:active {
+                  background: #777;
+            }
+     </style>
+</head>
+
+<body>
+     <div class="container">
+          <h1>Round 4 is over!</h1>
+          <h3>Redirect to leaderboard</h3>
+          <div class="buttons">
+               <a href="https://spider-craft-2.vercel.app/leaderboard" target="_blank">Mirror 1</a>
+               <a href="https://spider-craft-3.vercel.app/leaderboard" target="_blank">Mirror 2</a>
+               <a href="https://spider-craft-4.vercel.app/leaderboard" target="_blank">Mirror 3</a>
+               <a href="https://spider-craft-5.vercel.app/leaderboard" target="_blank">Mirror 4</a>
+          </div>
+     </div>
+</body>
+
+</html>
